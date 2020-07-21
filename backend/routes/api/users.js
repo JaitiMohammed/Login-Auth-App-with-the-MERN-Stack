@@ -3,14 +3,10 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const keys = require("../../config/keys");
-
-// load input validation
-
+// Load input validation
 const validateRegisterInput = require("../../validation/register");
 const validateLoginInput = require("../../validation/login");
-
-// load user model
-
+// Load User model
 const User = require("../../models/User");
 
 // @route POST api/users/register
@@ -96,3 +92,4 @@ router.post("/login", (req, res) => {
     });
   });
 });
+module.exports = router;
